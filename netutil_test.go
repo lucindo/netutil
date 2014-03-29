@@ -33,7 +33,7 @@ func Test_GetURLContents(t *testing.T) {
 
 	contents, err := GetURLContents(url)
 	if err != nil {
-		t.Errorf("Error from GetURLContents('%s'): %s", url, err)
+		t.Fatalf("Error from GetURLContents('%q'): %q", url, err)
 	}
 
 	response := []byte(text + "\n")
