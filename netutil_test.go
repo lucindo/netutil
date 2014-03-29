@@ -15,7 +15,7 @@ const text string = "Hello :D"
 
 func init() {
 	http.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
-		fmt.Fprintln(w, text)
+		fmt.Fprint(w, text)
 	})
 	log.Println("about to list and serve...")
 	go func() {
@@ -36,7 +36,7 @@ func Test_GetURLContents(t *testing.T) {
 		t.Fatalf("Error from GetURLContents('%q'): %q", url, err)
 	}
 
-	response := []byte(text + "\n")
+	response := []byte(text)
 
 	if string(contents) != string(response) {
 		t.Errorf("Got '%q' from GetURLContents('%q'), should be: %q", contents, url, response)
