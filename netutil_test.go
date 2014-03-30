@@ -1,5 +1,7 @@
 package netutil
 
+// use net/http/httptest
+
 import (
 	"fmt"
 	"log"
@@ -41,4 +43,8 @@ func Test_GetURLContents(t *testing.T) {
 	if string(contents) != string(response) {
 		t.Errorf("Got '%q' from GetURLContents('%q'), should be: %q", contents, url, response)
 	}
+}
+
+func RemoteUnmarshal_Test(t *testing.T) {
+	// TODO
 }
