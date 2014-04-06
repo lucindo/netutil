@@ -1,4 +1,4 @@
 netutil
 =======
 
-Golang network/http utilities
+Golang network/http utilities (work in progress)
