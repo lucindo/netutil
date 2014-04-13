@@ -1,7 +1,5 @@
 package netutil
 
-// use net/http/httptest
-
 import (
 	"fmt"
 	"log"
@@ -12,6 +10,8 @@ import (
 //
 // Test setup
 //
+
+// replace this with net/http/httptest
 
 const text string = "Hello :D"
 
