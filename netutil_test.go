@@ -19,7 +19,6 @@ func init() {
 	http.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
 		fmt.Fprint(w, text)
 	})
-	log.Println("about to list and serve...")
 	go func() {
 		log.Fatal(http.ListenAndServe(":8080", nil))
 	}()
@@ -29,9 +28,8 @@ func init() {
 // Testing
 //
 
-func Test_GetURLContents(t *testing.T) {
+func TestGetURLContents(t *testing.T) {
 	url := "http://localhost:8080/"
-	log.Println("starting the test...")
 
 	contents, err := GetURLContents(url)
 	if err != nil {
@@ -45,6 +43,6 @@ func Test_GetURLContents(t *testing.T) {
 	}
 }
 
-func RemoteUnmarshal_Test(t *testing.T) {
+func TestRemoteUnmarshal(t *testing.T) {
 	// TODO
 }
